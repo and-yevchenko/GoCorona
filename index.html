@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>GoCorona</title>
   </head>
   <body>
@@ -14,6 +21,10 @@
           <a class="header__logo" href="#">
             <img src="./public/logo/logo.svg" alt="Logo GoCorona" />
           </a>
+          <div class="menu-btn-l__icon">
+            <i class="fa-solid fa-bars menu-btn-l__open"></i>
+            <i class="fa-solid fa-x menu-btn-l__close"></i>
+          </div>
           <nav class="header__menu menu">
             <ul class="menu__list">
               <li class="menu__item"><a class="menu__link" href="#">HOME</a></li>
@@ -23,6 +34,9 @@
             </ul>
           </nav>
           <a class="header__button button" href="#">DOWNLOAD</a>
+          <a class="header__button header__button--save button" href="#"
+            ><i class="fa-solid fa-download"></i
+          ></a>
         </div>
       </header>
       <main class="main">
@@ -175,12 +189,12 @@
       <!-- /***FOOTER***/ -->
       <footer class="footer">
         <div class="footer__container">
-          <a href="#" class="footer__link"
-            ><img src="./public/link/google-play.png" alt="Google Play"
-          /></a>
-          <a href="#" class="footer__link"
-            ><img src="./public/link/app-store.png" alt="App Store"
-          /></a>
+          <a href="#" class="footer__link">
+            <img src="./public/link/google-play.png" alt="Google Play" />
+          </a>
+          <a href="#" class="footer__link">
+            <img src="./public/link/app-store.png" alt="App Store" />
+          </a>
         </div>
       </footer>
     </div>

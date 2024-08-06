@@ -1,0 +1,102 @@
+body._lock {
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: colors.$background-decor;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+  }
+  &._active {
+    right: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  &__list {
+    display: flex;
+    gap: clm-rem(0.5, 1024, 2.5);
+    padding-right: clm-rem(0, 1024, 2.5);
+    position: relative;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin: auto;
+      padding: toRem(60) toRem(30);
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    color: colors.$text-black;
+    transition: transform 0.2s ease-out;
+    &:hover {
+      transform: scale(1.5);
+      transition: transform 0.2s ease-out;
+    }
+    @media screen and (max-width: 800px) {
+      font-size: 1.5rem;
+      color: colors.$text-white;
+      line-height: 70px;
+    }
+  }
+}
+
+.menu-btn-l__icon {
+  display: none;
+  cursor: pointer;
+  z-index: 5;
+  position: absolute;
+  right: 30px;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+}
+.menu-btn-l__close {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 2rem;
+  color: colors.$text-white;
+  transition: opacity 0.5s ease;
+}
+.menu-btn-l__open {
+  display: block;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  font-size: 2rem;
+  color: colors.$text-white;
+  transition: opacity 0.5s ease;
+  @media screen and (max-width: 650px) {
+    color: colors.$text-red;
+  }
+}
+.menu-btn-l__icon._active .menu-btn-l__close {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+.menu-btn-l__icon._active .menu-btn-l__open {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}

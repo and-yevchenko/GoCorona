@@ -1,0 +1,99 @@
+.healthcare {
+  &__container {
+    padding: clm-rem(1.25, 1024, 5) 30px 13rem 30px;
+  }
+  &__textbox {
+    padding: 0 clm-rem(1, 1024, 8);
+    margin: 0 auto;
+    text-align: center;
+    @media screen and (max-width: 650px) {
+      padding: 0;
+    }
+  }
+  &__card {
+    margin-top: toRem(60);
+  }
+}
+.card-health {
+  display: flex;
+  justify-content: space-between;
+  gap: clm-rem(0, 1024, 4.5);
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  @media screen and (max-width: 530px) {
+    flex-direction: column;
+  }
+  &__item {
+    background: colors.$background-default;
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    border-radius: 8px;
+    padding: clm-rem(1.125, 1024, 2.5) clm-rem(0.625, 1024, 1.125);
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @media screen and (max-width: 530px) {
+      padding: 2.5rem 1.125rem;
+    }
+  }
+  &__image {
+    max-height: 72px;
+    margin-bottom: clm-rem(1.25, 1024, 3.625);
+  }
+  &__title {
+    color: colors.$text-black;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+    font-size: toRem(12);
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+  &__decor {
+    background-color: colors.$background-decor;
+    position: absolute;
+    border-radius: clm-px(15, 1024, 30);
+    z-index: -1;
+    @media screen and (max-width: 530px) {
+      display: none;
+    }
+    &--1 {
+      border-radius: clm-px(8, 1024, 16);
+      transform: rotate(-30deg);
+      width: clm-px(33, 1024, 65);
+      height: clm-px(33, 1024, 65);
+      left: clm-px(-25, 1024, -20);
+      bottom: clm-px(-40, 1024, -20);
+    }
+    &--2 {
+      transform: rotate(105deg);
+      width: clm-px(48, 1024, 97);
+      height: clm-px(48, 1024, 97);
+      right: clm-px(-50, 1024, -35);
+    }
+    &--3 {
+      transform: rotate(-30deg);
+      width: clm-px(63, 1024, 127);
+      height: clm-px(63, 1024, 127);
+      right: clm-px(-70, 1024, -55);
+      bottom: clm-px(-30, 1024, -20);
+    }
+    &--4 {
+      border-radius: clm-px(8, 1024, 16);
+      transform: rotate(-30deg);
+      width: clm-px(33, 1024, 65);
+      height: clm-px(33, 1024, 65);
+      right: clm-px(-25, 1024, -20);
+      top: clm-px(-40, 1024, -20);
+    }
+  }
+}

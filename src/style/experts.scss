@@ -1,0 +1,128 @@
+.experts {
+  background-color: colors.$background-started;
+  &__container {
+    padding: toRem(50) 30px toRem(115) 30px;
+    @media screen and (max-width: 650px) {
+      padding: toRem(50) 30px toRem(70) 30px;
+    }
+  }
+  &__content {
+    margin-top: toRem(50);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clm-rem(1, 1024, 4);
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  &__textbox {
+    flex: 0 1 50%;
+    @media screen and (max-width: 650px) {
+      max-width: 100%;
+      text-align: center;
+      padding: 0 0 toRem(40) 0;
+    }
+  }
+  &__video {
+    position: relative;
+    padding: 0 0 28% 0;
+    flex: 0 1 50%;
+    @media screen and (max-width: 650px) {
+      padding: 0 0 58% 0;
+    }
+    & iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.statistic {
+  margin: 0 auto;
+  max-width: clm-px(500, 1024, 744);
+  position: relative;
+  padding: toRem(51) 0 toRem(32) toRem(31);
+  @media screen and (max-width: 530px) {
+    padding: 0;
+  }
+  &__box {
+    max-width: clm-px(410, 1024, 654);
+    position: relative;
+    background-color: colors.$background-default;
+    box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clm-rem(1, 1024, 1.75) clm-rem(3, 1024, 5);
+    z-index: 2;
+    @media screen and (max-width: 530px) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 375px) {
+      padding: toRem(12) toRem(18);
+    }
+  }
+  &__value {
+    font-weight: 700;
+    color: colors.$text-red;
+    font-size: toRem(36);
+    text-align: center;
+    letter-spacing: 0.14rem;
+    line-height: 1.2;
+    @media screen and (max-width: 767px) {
+      font-size: toRem(28);
+    }
+  }
+  &__parag {
+    color: colors.$text-black;
+    font-size: toRem(11);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      font-size: toRem(9);
+    }
+    @media screen and (max-width: 375px) {
+      letter-spacing: normal;
+    }
+  }
+  &__decor {
+    position: absolute;
+    background-color: colors.$background-decor;
+    border-radius: clm-px(20, 1024, 30);
+    @media screen and (max-width: 530px) {
+      display: none;
+    }
+    &--1 {
+      width: clm-px(41.5, 1024, 62);
+      height: clm-px(41.5, 1024, 62);
+      border-radius: clm-px(10, 1024, 16);
+      left: 5px;
+      bottom: 9px;
+      transform: rotate(-30deg);
+    }
+    &--2 {
+      width: clm-px(65, 1024, 97);
+      height: clm-px(65, 1024, 97);
+      top: 5px;
+      left: 210px;
+      transform: rotate(105deg);
+    }
+    &--3 {
+      width: clm-px(85.75, 1024, 128);
+      height: clm-px(85.75, 1024, 128);
+      right: 10px;
+      bottom: 18px;
+      transform: rotate(-30deg);
+    }
+  }
+}

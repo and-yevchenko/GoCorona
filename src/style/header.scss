@@ -1,0 +1,46 @@
+@import './basic/menu.scss';
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  &__container {
+    padding: toRem(37) 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 800px) {
+      padding: toRem(37) toRem(90) toRem(37) 30px;
+    }
+  }
+  &__menu {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+  &__button {
+    flex: 0 0;
+    margin-left: toRem(120);
+    background-color: colors.$btn-blue;
+    &:hover {
+      background-color: colors.$btn-hover-blue;
+    }
+    &--save {
+      display: none;
+      padding: 0.875rem;
+    }
+    @media screen and (max-width: 890px) {
+      margin-left: toRem(70);
+    }
+    @media screen and (max-width: 650px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 424px) {
+      display: none;
+      &--save {
+        display: block;
+      }
+    }
+  }
+}

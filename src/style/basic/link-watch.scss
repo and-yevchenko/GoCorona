@@ -1,0 +1,23 @@
+.watch {
+  display: inline-block;
+  padding: toRem(12);
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #4285f4;
+    transform: scale(0, 1);
+    transition: transform 0.5s ease-out;
+    transform-origin: right top;
+  }
+  &:hover::before,
+  &:focus::before {
+    transform: scale(1, 1);
+    transform-origin: left top;
+  }
+}

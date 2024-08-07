@@ -1,0 +1,27 @@
+.textbox {
+  &__title {
+    font-size: toRem(44);
+    font-size: clm-rem(2, 1024, 2.75);
+    color: colors.$text-black;
+    font-weight: 700;
+    line-height: 1.25;
+    &:not(:last-child) {
+      margin: 0 0 toRem(12) 0;
+    }
+  }
+  &__word {
+    color: colors.$text-red;
+    &--blue {
+      color: colors.$text-blue;
+    }
+  }
+  &__info {
+    font-size: toRem(14);
+    &:not(:last-child) {
+      margin: 0 0 toRem(24) 0;
+    }
+    @media screen and (max-width: 1023px) {
+      font-size: toRem(12);
+    }
+  }
+}

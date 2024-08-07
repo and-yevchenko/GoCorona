@@ -1,0 +1,35 @@
+@use './basic/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Rubik:wght@400;700&display=swap');
+// @import "./basic/colors.scss";
+@import './functions/func.scss';
+@import './basic/button.scss';
+@import './basic/textbox.scss';
+@import './basic/link-watch.scss';
+
+#app {
+  font-family: 'Rubik', sans-serif;
+  color: colors.$text-default;
+  background-color: #fff;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+[class*='__container'] {
+  max-width: 1087px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.main {
+  flex: 1 1 auto;
+}
+
+@import './header.scss';
+@import './started.scss';
+@import './stay-safe.scss';
+@import './experts.scss';
+@import './healthcare.scss';
+@import './footer.scss';

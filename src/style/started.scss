@@ -1,0 +1,53 @@
+.started {
+  background-color: colors.$background-started;
+  &__container {
+    padding: toRem(150) toRem(30) toRem(50) toRem(30);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      background-color: colors.$background-decor;
+      top: 0;
+      right: toRem(250);
+      border-radius: 30px 0 0 30px;
+      transform: translate(100%, 0);
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    @media screen and (max-width: 650px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__image {
+    flex: 1 0 50%;
+    z-index: 2;
+    position: relative;
+    & img {
+      width: 100%;
+    }
+    @media screen and (max-width: 650px) {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+  &__textbox {
+    padding: 0 clm-rem(1, 1024, 5.3) 0 0;
+    @media screen and (max-width: 650px) {
+      padding: 0 0 toRem(40) 0;
+      text-align: center;
+    }
+  }
+  &__watch {
+    margin-top: clm-rem(2, 650, 3.75);
+  }
+}

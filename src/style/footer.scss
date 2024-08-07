@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: toRem(50);
+  z-index: 100;
+  @media screen and (max-width: 375px) {
+    bottom: toRem(15);
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.75rem;
+    @media screen and (max-width: 425px) {
+      gap: 0px;
+    }
+    @media screen and (max-width: 375px) {
+      flex-direction: column;
+    }
+  }
+}
